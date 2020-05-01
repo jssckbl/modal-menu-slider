@@ -97,3 +97,33 @@ input[type="submit"] {
 button:focus {
   outline: none;
 }
+
+.toggle {
+  background-color: rgba(0, 0, 0, 0.3);
+  position: absolute;
+  top: 20px;
+  left: 20px;
+}
+
+.cta-btn {
+  padding: 12px 30px;
+  font-size: 20px;
+}
+
+.container {
+  padding: 15px;
+  margin: 0 auto;
+  max-width: 100%;
+  width: 800px;
+}
+
+/* covers the whole page like an overlay */
+.modal-container {
+  background-color: rgba(0, 0, 0, 0.6);
+  /* display: none; */
+  position: fixed; /* this keeps the sign up part of the screen hidden */
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
