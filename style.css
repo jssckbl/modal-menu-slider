@@ -134,6 +134,11 @@ button:focus {
   bottom: 0;
 }
 
+/* above display: none; keeps modal from showing up but below code allows it to show upon page refresh */
+.modal-container.show-modal {
+  display: block;
+}
+
 .modal {
   background: #fff;
   border-radius: 5px;
@@ -146,6 +151,9 @@ button:focus {
   transform: translate(-50%, -50%);
   max-width: 100%;
   width: 400px;
+  /* part of code to create fade in of modal */
+  animation-name: modalopen;
+  animation-duration: var(--modal-duration);
 }
 
 .modal-header {
@@ -183,4 +191,15 @@ button:focus {
   position: absolute;
   top: 0;
   right: 0;
+}
+
+/* to actually transition the opacity for the modal when selected */
+@keyframes modalopen {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
 }
